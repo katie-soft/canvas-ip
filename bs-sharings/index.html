@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Создать шеринги</title>
+      <link rel="stylesheet" href="./select.css" />
+      <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main class="content">
+      <input class="input" type="text" id="input" placeholder="Введите название статьи" />
+
+      <div class="options">
+        <div class="button-wrapper">
+          <button class="button button_background" id="background-button-gradient">Фон 1</button>
+          <button class="button button_background" id="background-button-noise">Фон 2</button>
+          <button class="button button_background" id="background-button-none">Без фона</button>
+        </div>
+        <div id="select-wrapper-category" class="select input"></div>
+        <button id="download" class="button">Скачать картинку</button>
+      </div>
+
+      <div class="wrapper" id="sharing-1200">
+        <div class="label-wrapper">
+          <img class="logo" src="./img/label/bs-logo.png" alt="BS">
+          <img class="category-label" id="category-label"/>
+        </div>
+        <span class="title" id="title" contenteditable>Заголовок статьи</span>
+      </div>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="./select.js"></script>
+    <script src="./selectData.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>

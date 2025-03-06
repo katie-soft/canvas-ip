@@ -1,0 +1,140 @@
+@font-face {
+  font-family: 'TinkoffSans';
+  src: url('./fonts/TinkoffSans_Bold.woff2') format('woff2');
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --default-text-color: #3D3D3D;
+  --secondary-text-color: #F5F5F5;
+  --label-color: #7A7A7A;
+  --placeholder-color: #CCCCCC;
+  --border-color: #292929;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 30px;
+  align-items: flex-start;
+  font-family: 'Inter', sans-serif;
+  max-width: 1200px;
+}
+
+.input {
+  color: var(--default-text-color);
+  width: 100%;
+  max-width: 1200px;
+  padding: 16px;
+  border: 2px solid var(--border-color);
+  font-size: 18px;
+  font-weight: 500;
+  text-overflow: ellipsis;
+}
+
+.input:hover {
+  border-bottom-width: 4px;
+  padding-bottom: 14px;
+}
+
+.input:focus {
+  outline: none;
+  border-width: 3px;
+  padding-bottom: 14px;
+}
+
+.options {
+  display: flex;
+  width: 100%;
+  gap: 25px;
+  align-items: flex-start;
+}
+
+.button-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 15%;
+}
+
+.button {
+  background-color: transparent;
+  font-size: 16px;
+  font-family: 'Inter', sans-serif;
+  padding: 18px;
+  border: 2px solid var(--border-color);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.button:hover {
+  background-color: var(--border-color);
+  color: var(--secondary-text-color);
+}
+
+.label {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--label-color);
+}
+
+.select {
+  transition: none;
+  position: relative;
+  cursor: pointer;
+  max-width: 500px;
+}
+
+.select::after {
+  content: url("./img/icons/Arrow-down.svg");
+  position: absolute;
+  top: 18px;
+  right: 10px;
+}
+
+.select_active::after {
+  top: 14px;
+}
+
+.wrapper {
+  background-color: #000000;
+  background-size: contain;
+  width: 1200px;
+  height: 630px;
+  padding: 90px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.label-wrapper {
+  display: flex;
+  gap: 47px
+}
+
+.logo {
+  width: 174px;
+  height: 50px;
+}
+
+.category-label {
+  height: 50px;
+  background-size: contain;
+}
+
+.title {
+  color: #FFFFFF;
+  font-weight: 700;
+  font-size: 70px;
+  font-family: 'TinkoffSans';
+  width: 1020px;
+  line-height: 1;
+  letter-spacing: -0.5px;
+  outline: transparent;
+}

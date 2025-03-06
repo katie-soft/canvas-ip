@@ -1,0 +1,20 @@
+const categorySelectData = {
+  wrapperSelector: '#select-wrapper-category',
+  name: 'category',
+  id: 'category',
+  classNames: [''],
+  placeholder: 'Выберите рубрику',
+  placeholderColor: '#CCCCCC',
+  mainColor: '#3D3D3D',
+  eventName: 'setCustomSelectValue',
+  options: [
+    { name: 'Тренды', value: 'trendy' },
+    { name: 'Шпаргалка', value: 'shpargalka' },
+    { name: 'Развитие', value: 'razvitie' },
+    { name: 'Бизнес с нуля', value: 'start' },
+    { name: 'Новости', value: 'novosti' },
+    { name: 'Бухгалтерия', value: 'buhgalteriya' },
+    { name: 'Сообщество', value: 'blogs' },
+],
+  isRequired: true,
+}
