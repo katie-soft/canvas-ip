@@ -80,7 +80,7 @@ document.getElementById('download-1200').addEventListener('click', function() {
 });
 
 document.getElementById('download-1074').addEventListener('click', function() {
-    html2canvas(wrapperFb).then(canvas => {
+    html2canvas(wrapperVk).then(canvas => {
       let link = document.createElement('a');
       link.href = canvas.toDataURL('image/jpg');
       link.download = 'sharing-1074.jpg';
