@@ -46,22 +46,22 @@ function toggleSelectedButton(id) {
 
 // Выбор рубрики
 
-categoryLabelFb.src = "../img/label/novosti.jpg";
-categoryLabelVk.src = "../img/label/novosti.jpg";
+categoryLabelFb.src = "../img/label/novosti.png";
+categoryLabelVk.src = "../img/label/novosti.png";
 
 const categorySelect = new CustomSelect(categorySelectData);
 categorySelect.create();
 categorySelect.addEventListener(categorySelectData.eventName, function() {
-  categoryLabelFb.src = `../img/label/${categorySelect.getValue()}.jpg`;
-  categoryLabelVk.src = `../img/label/${categorySelect.getValue()}.jpg`;
+  categoryLabelFb.src = `../img/label/${categorySelect.getValue()}.png`;
+  categoryLabelVk.src = `../img/label/${categorySelect.getValue()}.png`;
 });
 
 // Очистка
 
 buttonClear.addEventListener('click', function() {
   input.value = '';
-  categoryLabelFb.src = "../img/label/novosti.jpg";
-  categoryLabelVk.src = "../img/label/novosti.jpg";
+  categoryLabelFb.src = "../img/label/novosti.png";
+  categoryLabelVk.src = "../img/label/novosti.png";
   wrapperFb.style.backgroundImage = 'none';
   wrapperVk.style.backgroundImage = 'none';
   toggleSelectedButton('background-button-none');
@@ -87,8 +87,3 @@ document.getElementById('download-1074').addEventListener('click', function() {
       link.click();
     });
 });
-
-// Примеры заголовков для тестирования:
-// Автоматизация работы с отзывами
-// Инновации и индивидуальный подход: Олеся Иванова о будущих тенденциях в деловом туризме
-// Как выпустить игру в Steam: полное руководство для бизнеса из России

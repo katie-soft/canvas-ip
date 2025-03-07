@@ -124,7 +124,15 @@
 
 .label-wrapper {
   display: flex;
-  gap: 47px
+  align-items: flex-start;
+}
+
+.wrapper_1200 .label-wrapper {
+  gap: 47px;
+}
+
+.wrapper_1074 .label-wrapper {
+  gap: 48px;
 }
 
 .wrapper_1200 .logo {
@@ -133,13 +141,16 @@
 }
 
 .wrapper_1074 .logo {
-  width: 174px;
-  height: 40px;
+  width: 124px;
+  height: 35px;
 }
 
-.category-label {
+.wrapper_1200 .category-label {
   height: 50px;
-  background-size: contain;
+}
+
+.wrapper_1074 .category-label {
+  height: 40px;
 }
 
 .title {
@@ -158,5 +169,5 @@
 
 .wrapper_1074 .title {
   font-size: 55px;
-  width: 1020px;
+  width: 914px;
 }
