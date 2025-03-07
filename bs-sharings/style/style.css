@@ -158,13 +158,13 @@
   font-weight: 700;
   font-family: 'TinkoffSans';
   line-height: 1;
-  letter-spacing: -0.5px;
   outline: transparent;
 }
 
 .wrapper_1200 .title {
   font-size: 70px;
   width: 1020px;
+  letter-spacing: -0.5px;
 }
 
 .wrapper_1074 .title {

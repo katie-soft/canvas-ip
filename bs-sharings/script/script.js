@@ -25,10 +25,10 @@ function setBackground(id) {
   let newBackgroundImage = '';
   switch (backgroundOption) {
     case 'gradient':
-      newBackgroundImage = "url('../img/background/gradient.jpg')";
+      newBackgroundImage = "url('./img/background/gradient.jpg')";
       break;
     case 'noise':
-      newBackgroundImage = "url('../img/background/noise.jpg')";
+      newBackgroundImage = "url('./img/background/noise.jpg')";
       break;
     case 'none':
     default:
@@ -46,22 +46,22 @@ function toggleSelectedButton(id) {
 
 // Выбор рубрики
 
-categoryLabelFb.src = "../img/label/novosti.png";
-categoryLabelVk.src = "../img/label/novosti.png";
+categoryLabelFb.src = "./img/label/novosti.png";
+categoryLabelVk.src = "./img/label/novosti.png";
 
 const categorySelect = new CustomSelect(categorySelectData);
 categorySelect.create();
 categorySelect.addEventListener(categorySelectData.eventName, function() {
-  categoryLabelFb.src = `../img/label/${categorySelect.getValue()}.png`;
-  categoryLabelVk.src = `../img/label/${categorySelect.getValue()}.png`;
+  categoryLabelFb.src = `./img/label/${categorySelect.getValue()}.png`;
+  categoryLabelVk.src = `./img/label/${categorySelect.getValue()}.png`;
 });
 
 // Очистка
 
 buttonClear.addEventListener('click', function() {
   input.value = '';
-  categoryLabelFb.src = "../img/label/novosti.png";
-  categoryLabelVk.src = "../img/label/novosti.png";
+  categoryLabelFb.src = "./img/label/novosti.png";
+  categoryLabelVk.src = "./img/label/novosti.png";
   wrapperFb.style.backgroundImage = 'none';
   wrapperVk.style.backgroundImage = 'none';
   toggleSelectedButton('background-button-none');
