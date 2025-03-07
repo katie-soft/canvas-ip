@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'TinkoffSans';
-  src: url('./fonts/TinkoffSans_Bold.woff2') format('woff2');
+  src: url('../fonts/TinkoffSans_Bold.woff2') format('woff2');
 }
 
 * {
@@ -60,7 +60,7 @@
   display: flex;
   flex-direction: column;
   gap: 15px;
-  width: 15%;
+  width: 30%;
 }
 
 .button {
@@ -73,7 +73,8 @@
   transition: all 0.3s;
 }
 
-.button:hover {
+.button:hover,
+.button_selected {
   background-color: var(--border-color);
   color: var(--secondary-text-color);
 }
@@ -88,11 +89,10 @@
   transition: none;
   position: relative;
   cursor: pointer;
-  max-width: 500px;
 }
 
 .select::after {
-  content: url("./img/icons/Arrow-down.svg");
+  content: url("../img/icons/Arrow-down.svg");
   position: absolute;
   top: 18px;
   right: 10px;
@@ -105,12 +105,21 @@
 .wrapper {
   background-color: #000000;
   background-size: contain;
-  width: 1200px;
-  height: 630px;
-  padding: 90px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+
+.wrapper_1200 {
+  width: 1200px;
+  height: 630px;
+  padding: 90px;
+}
+
+.wrapper_1074 {
+  width: 1074px;
+  height: 480px;
+  padding: 70px 0 80px 80px;
 }
 
 .label-wrapper {
@@ -118,9 +127,14 @@
   gap: 47px
 }
 
-.logo {
+.wrapper_1200 .logo {
   width: 174px;
   height: 50px;
+}
+
+.wrapper_1074 .logo {
+  width: 174px;
+  height: 40px;
 }
 
 .category-label {
@@ -131,10 +145,18 @@
 .title {
   color: #FFFFFF;
   font-weight: 700;
-  font-size: 70px;
   font-family: 'TinkoffSans';
-  width: 1020px;
   line-height: 1;
   letter-spacing: -0.5px;
   outline: transparent;
+}
+
+.wrapper_1200 .title {
+  font-size: 70px;
+  width: 1020px;
+}
+
+.wrapper_1074 .title {
+  font-size: 55px;
+  width: 1020px;
 }
