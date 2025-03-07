@@ -21,22 +21,15 @@ const backgroundButtons = buttonIds.map((id) => document.getElementById(id));
 backgroundButtons.forEach(button => button.addEventListener('click', () => setBackground(button.id)));
 
 function setBackground(id) {
-  const backgroundOption = id.split('-')[2];
-  let newBackgroundImage = '';
-  switch (backgroundOption) {
-    case 'gradient':
-      newBackgroundImage = "url('./img/background/gradient.jpg')";
-      break;
-    case 'noise':
-      newBackgroundImage = "url('./img/background/noise.jpg')";
-      break;
-    case 'none':
-    default:
-      newBackgroundImage = 'none';
-  }
   toggleSelectedButton(id);
-  wrapperFb.style.backgroundImage = newBackgroundImage;
-  wrapperVk.style.backgroundImage = newBackgroundImage;
+  if (id === 'none') {
+    wrapperFb.style.backgroundImage = 'none';
+    wrapperVk.style.backgroundImage = 'none';
+  } else {
+    const backgroundOption = id.split('-')[2];
+    wrapperFb.style.backgroundImage = `url('./img/background/${backgroundOption}1200.jpg')`;
+    wrapperVk.style.backgroundImage = `url('./img/background/${backgroundOption}1074.jpg')`;
+  }  
 }
 
 function toggleSelectedButton(id) {
