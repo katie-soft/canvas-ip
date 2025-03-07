@@ -53,6 +53,8 @@ categorySelect.addEventListener(categorySelectData.eventName, function() {
 
 buttonClear.addEventListener('click', function() {
   input.value = '';
+  titleFb.textContent = 'Заголовок статьи';
+  titleVk.textContent = 'Заголовок статьи';
   categoryLabelFb.src = "./img/label/novosti.png";
   categoryLabelVk.src = "./img/label/novosti.png";
   wrapperFb.style.backgroundImage = 'none';
