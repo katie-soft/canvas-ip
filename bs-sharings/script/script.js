@@ -10,9 +10,21 @@ const buttonClear = document.getElementById('button_clear');
 // Смена текста при вводе в инпут
 
 input.addEventListener('input', function() {
-    titleFb.textContent = this.value;
-    titleVk.textContent = this.value;
+    titleFb.textContent = addNbsp(this.value);
+    titleVk.textContent = addNbsp(this.value);
 });
+
+// Расстановка неразрывных пробелов
+
+function addNbsp(str) {
+  let strWithNbsp = '';
+  const arr = str.split(' ');
+  arr.forEach(el => {
+    strWithNbsp += el;
+    strWithNbsp += el.length > 3 ? ' ' : ' '; 
+  })
+  return strWithNbsp;
+}
 
 // Кнопки для смены бэкграунда
 
