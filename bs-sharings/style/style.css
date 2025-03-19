@@ -214,3 +214,19 @@
   font-size: 55px;
   width: 914px;
 }
+
+.footer {
+  width: 1140px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px 24px 30px;
+  color: var(--label-color);
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+}
+
+.footer__link {
+  color: var(--label-color);
+  text-underline-offset: 7px;
+}
