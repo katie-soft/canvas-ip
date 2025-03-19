@@ -27,15 +27,25 @@
   max-width: 1200px;
 }
 
+.page-title {
+  color: var(--default-text-color);
+  font-size: 40px;
+  font-weight: 700;
+  margin: 0 0 12px;
+}
+
 .input {
   color: var(--default-text-color);
-  width: 100%;
   max-width: 1200px;
   padding: 16px;
   border: 2px solid var(--border-color);
   font-size: 18px;
   font-weight: 500;
   text-overflow: ellipsis;
+}
+
+.input::placeholder {
+  color: var(--placeholder-color);
 }
 
 .input:hover {
@@ -49,6 +59,10 @@
   padding-bottom: 14px;
 }
 
+.text-input {
+  width: 100%;
+}
+
 .options {
   display: flex;
   width: 100%;
@@ -56,27 +70,55 @@
   align-items: flex-start;
 }
 
+.background-buttons {
+  display: flex;
+  min-width: 30%;
+}
+
 .button-wrapper {
   display: flex;
-  flex-direction: column;
-  gap: 15px;
-  width: 30%;
+  gap: 20px;
 }
 
 .button {
   background-color: transparent;
   font-size: 16px;
   font-family: 'Inter', sans-serif;
-  padding: 18px;
+  font-weight: 500;
+  padding: 12px 32px;
   border: 2px solid var(--border-color);
   cursor: pointer;
   transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
 }
 
 .button:hover,
 .button_selected {
   background-color: var(--border-color);
   color: var(--secondary-text-color);
+}
+
+.button svg {
+  fill: #000000;
+  transition: all 0.3s;
+}
+
+.button:hover svg {
+  fill: #FFFFFF;
+}
+
+.button_background {
+  min-width: 110px;
+  text-wrap: nowrap;
+  padding: 18px 45px;
+}
+
+.button_background:nth-child(2) {
+  border-left: none;
+  border-right: none;
 }
 
 .label {
@@ -89,6 +131,7 @@
   transition: none;
   position: relative;
   cursor: pointer;
+  min-width: 60%;
 }
 
 .select::after {
