@@ -24,7 +24,6 @@
   padding: 30px;
   align-items: flex-start;
   font-family: 'Inter', sans-serif;
-  max-width: 1200px;
 }
 
 .page-title {
@@ -60,14 +59,14 @@
 }
 
 .text-input {
-  width: 100%;
+  width: 1200px;
 }
 
 .options {
   display: flex;
   gap: 25px;
   align-items: flex-start;
-  width: 100%;
+  width: 1200px;
   justify-content: space-between;
 }
 
