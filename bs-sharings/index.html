@@ -1,62 +1,97 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Создать шеринги</title>
-      <link rel="icon" href="./img/icons/favicon.ico" />
-      <link rel="stylesheet" href="./style/select.css" />
-      <link rel="stylesheet" href="./style/style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Создать шеринги</title>
+    <link rel="icon" href="./img/icons/favicon.ico" />
+    <link rel="stylesheet" href="./style/select.css" />
+    <link rel="stylesheet" href="./style/style.css" />
   </head>
   <body>
     <main class="content">
       <h1 class="page-title">Генератор шерингов</h1>
-      <input class="input text-input" type="text" id="input" placeholder="Введите название статьи" />
+      <input
+        class="input text-input"
+        type="text"
+        id="input"
+        placeholder="Введите название статьи"
+      />
 
       <div class="options">
-        <div id="select-wrapper-category" class="select input"></div>
         <div class="background-buttons">
-          <button class="button button_background button_selected" id="background-button-none">Без фона</button>
-          <button class="button button_background" id="background-button-gradient">Фон 1</button>
-          <button class="button button_background" id="background-button-noise">Фон 2</button>
+          <button
+            class="button button_background button_selected"
+            id="background-button-none"
+          >
+            Без фона
+          </button>
+          <button class="button button_background" id="background-button-1">
+            Фон 1
+          </button>
+          <button class="button button_background" id="background-button-2">
+            Фон 2
+          </button>
+          <button class="button button_background" id="background-button-3">
+            Фон 3
+          </button>
+          <button class="button button_background" id="background-button-4">
+            Фон 4
+          </button>
         </div>
-      </div>
 
-      <div class="button-wrapper">
-        <button id="download-1200" class="button">
-          <svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
-            <path d="M17.7716 4V16.5728L22.3621 11.9823L24.2167 13.8368L16.46 21.5935L8.70332 13.8368L10.5579 11.9823L15.1484 16.5728V4H17.7716ZM6.62316 18.4274V24.9853H26.2968V18.4274H28.92V27.6084H4V18.4274H6.62316Z"/>
-          </svg>
-          Скачать 1200
-        </button>
-        <button id="download-1074" class="button">
-          <svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
-            <path d="M17.7716 4V16.5728L22.3621 11.9823L24.2167 13.8368L16.46 21.5935L8.70332 13.8368L10.5579 11.9823L15.1484 16.5728V4H17.7716ZM6.62316 18.4274V24.9853H26.2968V18.4274H28.92V27.6084H4V18.4274H6.62316Z"/>
-          </svg>
-          Скачать 1074
-        </button>
-        <button id="button_clear" class="button">
-          <svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
-            <path d="M17.6077 16L25.8868 7.72085L26.0636 7.54408L25.8868 7.3673L24.6036 6.08412L24.4268 5.90733L24.2501 6.08413L16 14.3353L7.75001 6.08413L7.57323 5.90733L7.39644 6.08412L6.11326 7.3673L5.93649 7.54408L6.11326 7.72085L14.3924 16L6.11327 24.2792L5.93649 24.4559L6.11327 24.6327L7.39645 25.9159L7.57324 26.0927L7.75001 25.9159L16 17.6647L24.2501 25.9159L24.4268 26.0927L24.6036 25.9159L25.8868 24.6327L26.0636 24.4559L25.8868 24.2792L17.6077 16Z" stroke="#292929" stroke-width="0.5"/>
-          </svg>
-          Очистить
-        </button>
+        <div id="select-wrapper-category" class="select input"></div>
+
+        <div class="button-wrapper">
+          <button id="download" class="button">
+            <svg
+              width="32"
+              height="32"
+              viewBox="0 0 32 32"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M17.7716 4V16.5728L22.3621 11.9823L24.2167 13.8368L16.46 21.5935L8.70332 13.8368L10.5579 11.9823L15.1484 16.5728V4H17.7716ZM6.62316 18.4274V24.9853H26.2968V18.4274H28.92V27.6084H4V18.4274H6.62316Z"
+              />
+            </svg>
+            Скачать
+          </button>
+          <button id="button_clear" class="button">
+            <svg
+              width="32"
+              height="32"
+              viewBox="0 0 32 32"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M17.6077 16L25.8868 7.72085L26.0636 7.54408L25.8868 7.3673L24.6036 6.08412L24.4268 5.90733L24.2501 6.08413L16 14.3353L7.75001 6.08413L7.57323 5.90733L7.39644 6.08412L6.11326 7.3673L5.93649 7.54408L6.11326 7.72085L14.3924 16L6.11327 24.2792L5.93649 24.4559L6.11327 24.6327L7.39645 25.9159L7.57324 26.0927L7.75001 25.9159L16 17.6647L24.2501 25.9159L24.4268 26.0927L24.6036 25.9159L25.8868 24.6327L26.0636 24.4559L25.8868 24.2792L17.6077 16Z"
+                stroke="#292929"
+                stroke-width="0.5"
+              />
+            </svg>
+            Очистить
+          </button>
+        </div>
       </div>
 
       <div class="wrapper wrapper_1200" id="sharing-1200">
         <div class="label-wrapper">
-          <img class="logo" src="./img/label/bs-logo.png" alt="BS">
-          <img class="category-label" id="category-label-1200"/>
+          <img class="logo" src="./img/label/bs-logo.png" alt="BS" />
+          <img class="category-label" id="category-label-1200" />
         </div>
-        <span class="title" id="title-1200" contenteditable>Заголовок статьи</span>
+        <span class="title" id="title-1200" contenteditable
+          >Заголовок статьи</span
+        >
       </div>
 
       <div class="wrapper wrapper_1074" id="sharing-1074">
         <div class="label-wrapper">
-          <img class="logo" src="./img/label/bs-logo.png" alt="BS">
-          <img class="category-label" id="category-label-1074"/>
+          <img class="logo" src="./img/label/bs-logo.png" alt="BS" />
+          <img class="category-label" id="category-label-1074" />
         </div>
-        <span class="title" id="title-1074" contenteditable>Заголовок статьи</span>
+        <span class="title" id="title-1074" contenteditable
+          >Заголовок статьи</span
+        >
       </div>
     </main>
 

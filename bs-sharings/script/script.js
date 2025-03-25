@@ -28,19 +28,19 @@ function addNbsp(str) {
 
 // Кнопки для смены бэкграунда
 
-const buttonIds = ['background-button-gradient', 'background-button-noise', 'background-button-none'];
+const buttonIds = ['background-button-none', 'background-button-1', 'background-button-2', 'background-button-3', 'background-button-4'];
 const backgroundButtons = buttonIds.map((id) => document.getElementById(id));
 backgroundButtons.forEach(button => button.addEventListener('click', () => setBackground(button.id)));
 
 function setBackground(id) {
   toggleSelectedButton(id);
-  if (id === 'none') {
+  if (id === 'background-button-none') {
     wrapperFb.style.backgroundImage = 'none';
     wrapperVk.style.backgroundImage = 'none';
   } else {
     const backgroundOption = id.split('-')[2];
-    wrapperFb.style.backgroundImage = `url('./img/background/${backgroundOption}1200.jpg')`;
-    wrapperVk.style.backgroundImage = `url('./img/background/${backgroundOption}1074.jpg')`;
+    wrapperFb.style.backgroundImage = `url('./img/background/back-${backgroundOption}_1200.jpg')`;
+    wrapperVk.style.backgroundImage = `url('./img/background/back-${backgroundOption}_1074.jpg')`;
   }  
 }
 
@@ -77,20 +77,13 @@ buttonClear.addEventListener('click', function() {
 
 // Выгрузка в jpg
 
-document.getElementById('download-1200').addEventListener('click', function() {
-    html2canvas(wrapperFb).then(canvas => {
+document.getElementById('download').addEventListener('click', function() {
+   Promise.all([html2canvas(wrapperFb), html2canvas(wrapperVk)]).then(canvases => {
+    canvases.forEach((canvas, index) => {
       let link = document.createElement('a');
       link.href = canvas.toDataURL('image/jpg');
-      link.download = 'sharing-1200.jpg';
+      link.download = index === 0 ? 'sharing-1200.jpg' : 'sharing-1074.jpg';
       link.click();
-    });
-});
-
-document.getElementById('download-1074').addEventListener('click', function() {
-    html2canvas(wrapperVk).then(canvas => {
-      let link = document.createElement('a');
-      link.href = canvas.toDataURL('image/jpg');
-      link.download = 'sharing-1074.jpg';
-      link.click();
-    });
+    })
+  })
 });

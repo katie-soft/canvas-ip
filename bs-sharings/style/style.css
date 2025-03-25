@@ -24,7 +24,6 @@
   padding: 30px;
   align-items: flex-start;
   font-family: 'Inter', sans-serif;
-  max-width: 1200px;
 }
 
 .page-title {
@@ -65,14 +64,14 @@
 
 .options {
   display: flex;
-  width: 100%;
   gap: 25px;
   align-items: flex-start;
+  width: 100%;
+  justify-content: space-between;
 }
 
 .background-buttons {
   display: flex;
-  min-width: 30%;
 }
 
 .button-wrapper {
@@ -85,7 +84,7 @@
   font-size: 16px;
   font-family: 'Inter', sans-serif;
   font-weight: 500;
-  padding: 12px 32px;
+  padding: 11px 21px;
   border: 2px solid var(--border-color);
   cursor: pointer;
   transition: all 0.3s;
@@ -111,14 +110,12 @@
 }
 
 .button_background {
-  min-width: 110px;
   text-wrap: nowrap;
-  padding: 18px 45px;
+  padding: 18px 24px;
 }
 
-.button_background:nth-child(2) {
+.button_background:not(:first-child) {
   border-left: none;
-  border-right: none;
 }
 
 .label {
@@ -131,7 +128,7 @@
   transition: none;
   position: relative;
   cursor: pointer;
-  min-width: 60%;
+  min-width: 25%;
 }
 
 .select::after {
