@@ -1,3 +1,5 @@
+window.devicePixelRatio = 1; // для корректной работы на ретине
+
 const wrapperFb = document.getElementById('sharing-1200');
 const wrapperVk = document.getElementById('sharing-1074');
 const titleFb = document.getElementById('title-1200');

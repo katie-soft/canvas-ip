@@ -89,3 +89,13 @@
   top: 0;
   bottom: 0;
 }
+
+.input-text {
+  color: var(--default-text-color);
+  width: 100%;
+  padding: 16px;
+  border: 2px solid var(--border-color);
+  font-size: 18px;
+  font-weight: 500;
+  text-overflow: ellipsis;
+}

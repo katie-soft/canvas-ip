@@ -15,13 +15,16 @@
   --label-color: #7A7A7A;
   --placeholder-color: #CCCCCC;
   --border-color: #292929;
+  --content-width: 1200px;
+  --gap: 30px;
+  --control-height: 58px;
 }
 
 .content {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  padding: 30px;
+  padding: var(--gap);
   align-items: flex-start;
   font-family: 'Inter', sans-serif;
 }
@@ -35,7 +38,7 @@
 
 .input {
   color: var(--default-text-color);
-  max-width: 1200px;
+  max-width: var(--content-width);
   padding: 16px;
   border: 2px solid var(--border-color);
   font-size: 18px;
@@ -59,14 +62,14 @@
 }
 
 .text-input {
-  width: 1200px;
+  width: var(--content-width);
 }
 
 .options {
   display: flex;
   gap: 25px;
   align-items: flex-start;
-  width: 1200px;
+  width: var(--content-width);
   justify-content: space-between;
 }
 
@@ -129,6 +132,7 @@
   position: relative;
   cursor: pointer;
   min-width: 25%;
+  min-height: var(--control-height);
 }
 
 .select::after {
@@ -213,11 +217,12 @@
 }
 
 .footer {
-  width: 1140px;
+  width: var(--content-width);
+  margin-left: var(--gap);
+  margin-bottom: var(--gap);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 30px 24px 30px;
   color: var(--label-color);
   font-family: 'Inter', sans-serif;
   font-size: 14px;
