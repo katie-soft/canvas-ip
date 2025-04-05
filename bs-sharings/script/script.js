@@ -79,12 +79,13 @@ buttonClear.addEventListener('click', function() {
 
 // Выгрузка в jpg
 
-document.getElementById('download').addEventListener('click', function() {
-   Promise.all([html2canvas(wrapperFb), html2canvas(wrapperVk)]).then(canvases => {
+  document.getElementById('download').addEventListener('click', function() {
+    const timeStamp = Date.now();
+    Promise.all([html2canvas(wrapperFb), html2canvas(wrapperVk)]).then(canvases => {
     canvases.forEach((canvas, index) => {
       let link = document.createElement('a');
       link.href = canvas.toDataURL('image/jpg');
-      link.download = index === 0 ? 'sharing-1200.jpg' : 'sharing-1074.jpg';
+      link.download = index === 0 ? `sharing-1200-${timeStamp}.jpg` : `sharing-1074-${timeStamp}.jpg`;
       link.click();
     })
   })
