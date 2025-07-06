@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Путь ИП</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon.ico"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+  <body>
+    <main class="content">
+      <section class="header">
+        <h1 class="heading">Путь ИП</h1>
+        <div class="header-wrapper">
+          <span class="progress">
+            <span id="progressCounter">Пройдено шагов: 0/5</span></span
+          >
+          <button class="button button_transparent" id="howToPlay">
+            Как пройти?
+          </button>
+        </div>
+      </section>
+
+      <h2 class="subtitle">Регистрация</h2>
+      <hr class="separator" color="grey" />
+      <h2 class="subtitle">Настройка</h2>
+      <hr class="separator" color="grey" />
+      <h2 class="subtitle">Запуск</h2>
+
+      <canvas id="gameCanvas" width="1440" height="855"></canvas>
+
+      <div class="tooltip" id="tooltip">Сначала пройдите предыдущие шаги</div>
+    </main>
+
+    <div class="modal" id="howToPlayModal">
+      <div class="modal-content">
+        <span class="close" id="closeModal">&times;</span>
+        <h2>Как пройти?</h2>
+        <p>
+          Кликайте по точкам, чтобы отметить шаг как выполненный. Персонаж будет
+          двигаться по пути. Нажмите на название шага, чтобы увидеть полезные
+          ссылки и подсказки.
+        </p>
+      </div>
+    </div>
+
+    <div class="modal" id="stepInfoModal">
+      <div class="modal-content">
+        <span class="close" id="closeStepModal">&times;</span>
+        <div class="modal-inner-content" id="stepInfoContent"></div>
+      </div>
+    </div>
+
+    <script type="module" src="./scripts/script.js"></script>
+  </body>
+</html>
