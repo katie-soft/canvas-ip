@@ -15,7 +15,7 @@ function updateProgressCounter() {
 
 // Персонаж
 const heroImage = new Image();
-heroImage.src = '/images/hero.png';
+heroImage.src = '/canvas-ip/canvas-bs/images/hero.png';
 
 const character = {
   x: 130,
